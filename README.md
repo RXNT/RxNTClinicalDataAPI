@@ -134,7 +134,7 @@ The API returns patient data on these different categories:
   - Problems
   - Medications
   - Medication Allergies
-  - Laboratory Tests
+  - Laboratory Test(s)
   - Laboratory Value(s)/Result(s)
   - Vital Signs
   - Procedures
@@ -145,7 +145,7 @@ The API returns patient data on these different categories:
   - Goals
   - Health Concerns
   
-  In order to access patient data for specific category, the categories should be passed as an array of string in the body of the request. The category string should follow the exact same format as in [2015 Edition §170.315(g)(8) Application Access –Data Category Request](https://www.healthit.gov/sites/default/files/170_315g8_application_access_data_category_request_v1_1_1.pdf).
+  In order to access patient data for specific category, categories should be passed as an array of string in the body of the request. The category string should follow the exact same formatting as in the list above. Detailed description of each of the fields in the list can be found at [2015 Edition Common Clinical Data Set - 45 CFR 170.102](https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf).
 
 The sample request is shown below: 
 
