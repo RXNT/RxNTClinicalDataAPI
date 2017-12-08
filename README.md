@@ -51,6 +51,8 @@ Parameters:
 - UserName
 - Password
 
+Both the above parameters are required. They should be passed as JSON in the body of the request.
+
 Sample Response:
   ```
   {
@@ -65,6 +67,8 @@ Sample Response:
     "Meta": null
   }
   ```
+  
+  The response is in JSON. It returns values for each of the keys in the sample response above.
   
    In order to access RxNT CDAPI, developers/ third parties should have access to RxNT ExternalReferencePatientId, which is available to registered patients in their PHR. Third parties should call our API with the ExternalPatientId in order to access patient clinical information. RxNT uses patient external id as a primary key to return patient clinical data to registered third party clients. 
   
@@ -90,9 +94,20 @@ Sample Request
     "ExternalReferencePatientId": "ExternalReferencePatientId"
   }
   ```
+  
+  Parameters
+  - DoctorCompanyId
+  - Signature
+  - Token
+  - RequestCompanyId
+  - ExternalReferencePatientId
+  
+  All the above parameters are required. They should passed as JSON in the body of the request.
 
 Sample Response
 
+  The response is in JSON an it returns values for ExternalReferencePatientId, ValidationMessages, ValidationStatus and Meta.
+  
   On Success:
   ```
   {
@@ -185,8 +200,12 @@ Parameters:
   - Categories
   - FromDate
   - ToDate
+  
+  All the above parameters, apart from FromDate and ToDate are required. FromDate and ToDate are optional but you should either have both of them or none of them. The category array should not be empty; it should contain at least one of the categories. 
 
 Sample Response: 
+
+The response is in JSON and it returns values for PatientCCDSXml, ValidationMessages, ValidationStatus, Meta.
   ```
   {
     "PatientCCDSXml": “Patient Data in XML”
@@ -237,8 +256,12 @@ Parameters:
   - ExternalReferencePatientId
   - FromDate
   - ToDate
-
+  
+    All the above parameters, apart from FromDate and ToDate are required. FromDate and ToDate are optional but you should either have both of them or none of them.
+    
 Sample Response
+
+The response is in JSON and it returns values for PatientCCDSXml, ValidationMessages, ValidationStatus, Meta.
   ```
   {
     "PatientCCDSXml": “CCDS XML”,
@@ -247,6 +270,8 @@ Sample Response
     "Meta": null
   }
   ```
+The CCDS XML is returned as a value for the key PatientCCDSXml in the JSON response. It can be used by third party clients as per their needs.
+
 In order to get patient data for a specific date, fields FromDate and ToDate should be same.
   
 ### [Click Here to View RxNTs Privacy Policy](https://www.rxnt.com/privacy-policy/)
