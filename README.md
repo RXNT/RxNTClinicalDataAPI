@@ -303,7 +303,7 @@ The above table is the master table used for the queries in the scenarios below:
   - To Date = “12/31/2005”
   
 No records will be listed
-
+<br>
 **Scenario 2:**
   - From Date = “01/01/2005”
   - To Date = “12/31/2006”
@@ -313,7 +313,7 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
   
-
+<br>
 **Scenario 3:**
   - From Date = “01/01/2007”
   - To Date = “12/31/2010”
@@ -323,7 +323,7 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
 
-
+<br>
 **Scenario 4:**
   - From Date = “01/01/2007”
   - To Date = “12/31/2011”
@@ -336,7 +336,7 @@ No records will be listed
   |Chronic rejection of renal transplant| 12/31/2011 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
 
-
+<br>
 **Scenario 5:**
   - From Date = “01/01/2007”
   - To Date = “12/31/2015”
@@ -349,7 +349,7 @@ No records will be listed
   |Fever, unspecified fever cause| 6/22/2015 | |
   |Overweight| 12/31/2006 | 6/1/2007 |
 
-
+<br>
 **Scenario 6:**
   - From Date = “01/01/2008”
   - To Date = “12/31/2011”
@@ -360,7 +360,7 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Chronic rejection of renal transplant| 12/31/2011 |  |
 
-
+<br>
 **Scenario 7:**
   - From Date = “01/01/2015”
   - To Date = “12/31/2017”
@@ -372,7 +372,7 @@ No records will be listed
   |Chronic rejection of renal transplant| 12/31/2011 |  |
   |Fever, unspecified fever cause| 6/22/2015 | |
 
-
+<br>
 **Scenario 8:**
   - From Date = “12/31/2006”
   - To Date = “12/31/2006”
@@ -382,7 +382,7 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
   
-  
+<br>
 **Scenario 9:**
   - From Date = “01/01/2015”
   - To Date = “01/01/2015”
@@ -393,7 +393,7 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Chronic rejection of renal transplant| 12/31/2011 |  |
 
-
+<br>
 **Scenario 10:**
   - From Date = “06/01/2007”
   - To Date = “06/01/2007”
@@ -403,7 +403,7 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
   
-  
+<br>
 **Scenario 11:**
   - From Date = “06/02/2007”
   - To Date = “06/02/2007”
@@ -412,6 +412,6 @@ No records will be listed
   |  --- | --- | --- | 
   |Severe hypothyroidism| 12/31/2006 |  |
 
-<div></div>
+<br>
 <a href="#top">Click here to Navigate to Top</a>
 ### [Click Here to View RxNTs Privacy Policy](https://www.rxnt.com/privacy-policy/)
