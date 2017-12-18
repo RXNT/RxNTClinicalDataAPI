@@ -274,4 +274,131 @@ The CCDS XML is returned as a value for the key PatientCCDSXml in the JSON respo
 
 In order to get patient data for a specific date, fields FromDate and ToDate should be same.
   
+  
+###Date Criteria filter for g(8), g(9) and VDT
+
+Date is filtered based on the given FromDate and ToDate value and it must follow the following guidelines:
+  - “Start Date” should be less than or equal to “To Date”
+  - If “End Date” Exists, “From Date” should be less than or equal to “End Date”
+
+The following section contains some scenarios that explain date filtering.
+
+|Problem| Start Date|End Date|
+|  --- | --- | --- | 
+|Essential hypertension|10/5/2011 ||
+|Severe hypothyroidism|12/31/2006 ||
+|Chronic rejection of renal transplant|12/31/2011 ||
+|Fever, unspecified fever cause|6/22/2015 ||
+|Overweight|12/31/2006|6/1/2007|
+
+The above table is the master table used for the queries in the scenarios below: 
+
+*Scenario 1:*
+  - From Date = “01/01/2005”
+  - To Date = “12/31/2005”
+  
+No records will be listed
+
+*Scenario 2:*
+  - From Date = “01/01/2005”
+  - To Date = “12/31/2006”
+  
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Overweight| 12/31/2006 | 6/1/2007 |
+
+*Scenario 3:*
+  - From Date = “01/01/2007”
+  - To Date = “12/31/2010”
+  
+   |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Overweight| 12/31/2006 | 6/1/2007 |
+
+*Scenario 4:*
+  - From Date = “01/01/2007”
+  - To Date = “12/31/2011”
+  
+   
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Essential hypertension| 10/5/2011 |  |
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Chronic rejection of renal transplant| 12/31/2011 |  |
+  |Overweight| 12/31/2006 | 6/1/2007 |
+
+
+*Scenario 5:*
+  - From Date = “01/01/2007”
+  - To Date = “12/31/2015”
+  
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Essential hypertension| 10/5/2011 |  |
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Chronic rejection of renal transplant| 12/31/2011 |  |
+  |Fever, unspecified fever cause| 6/22/2015 | |
+  |Overweight| 12/31/2006 | 6/1/2007 |
+
+*Scenario 6:*
+  - From Date = “01/01/2008”
+  - To Date = “12/31/2011”
+  
+   |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Essential hypertension| 10/5/2011 |  |
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Chronic rejection of renal transplant| 12/31/2011 |  |
+
+*Scenario 7:*
+  - From Date = “01/01/2015”
+  - To Date = “12/31/2017”
+
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Essential hypertension| 10/5/2011 |  |
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Chronic rejection of renal transplant| 12/31/2011 |  |
+  |Fever, unspecified fever cause| 6/22/2015 | |
+
+*Scenario 8:*
+  - From Date = “12/31/2006”
+  - To Date = “12/31/2006”
+  
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Overweight| 12/31/2006 | 6/1/2007 |
+  
+*Scenario 9:*
+  - From Date = “01/01/2015”
+  - To Date = “01/01/2015”
+
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Essential hypertension| 10/5/2011 |  |
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Chronic rejection of renal transplant| 12/31/2011 |  |
+
+*Scenario 10:*
+  - From Date = “06/01/2007”
+  - To Date = “06/01/2007”
+
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Severe hypothyroidism| 12/31/2006 |  |
+  |Overweight| 12/31/2006 | 6/1/2007 |
+  
+*Scenario 11:*
+  - From Date = “06/02/2007”
+  - To Date = “06/02/2007”
+  
+  |Problem| Start Date|End Date|
+  |  --- | --- | --- | 
+  |Severe hypothyroidism| 12/31/2006 |  |
+
+
+
 ### [Click Here to View RxNTs Privacy Policy](https://www.rxnt.com/privacy-policy/)
