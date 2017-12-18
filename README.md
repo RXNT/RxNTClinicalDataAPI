@@ -165,9 +165,7 @@ The API returns patient data on these different categories:
 
 The sample request is shown below: 
 
-**Sample Request:**
-
-  Method: **POST** 
+ Method: **POST** 
  URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetV1PatientInfoByExternalPatientId`
 
 **Sample Request**
@@ -230,7 +228,7 @@ The sample request is shown below:
   Method: POST
  URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetPatientCCDSData`
 
-**Sample Response (All Data)**
+**Sample Request (All Data)**
 
 Headers:
   ```
