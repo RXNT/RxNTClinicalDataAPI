@@ -75,7 +75,7 @@ Both the above parameters are required. They should be passed as JSON in the bod
   
   We have created an API that checks to see if the ExternalPatientReferenceId exists, so that third parties can make sure they have the correct ExternalReferencePatientId exists before calling the API for data access.
 
-Sample Request 
+**Sample Request**
 
   Method: **POST**  
   URL:`https://devqa.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetV1PatientInfoByExternalPatientId`
@@ -412,6 +412,6 @@ No records will be listed
   |  --- | --- | --- | 
   |Severe hypothyroidism| 12/31/2006 |  |
 
-
+<div></div>
 <a href="#top">Click here to Navigate to Top</a>
 ### [Click Here to View RxNTs Privacy Policy](https://www.rxnt.com/privacy-policy/)
