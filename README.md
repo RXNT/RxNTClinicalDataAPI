@@ -1,3 +1,4 @@
+<div id="top"></div>
 ## RxNT Clinical Data API 
 
 This documentation provides instruction to access RxNT Clinical Data API (RxNT CDAPI). RxNT CDAPI provides access to patients data as part of certification criteria outlined by the Office of the National Coordinator for Health Information Technology (ONC).
@@ -27,7 +28,7 @@ The request body should contain the following login information provided to them
   }
   ```
   
-Sample Request:
+**Sample Request:**
 
   Method: **POST**              
   URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/authentication/AuthenticateUser`
@@ -47,13 +48,13 @@ Sample Request:
   }
   ```
 
-Parameters:
+**Parameters:**
 - UserName
 - Password
 
 Both the above parameters are required. They should be passed as JSON in the body of the request.
 
-Sample Response:
+**Sample Response:**
   ```
   {
     "AppLoginId": "loginId",
@@ -95,7 +96,7 @@ Sample Request
   }
   ```
   
-  Parameters
+  **Parameters**
   - DoctorCompanyId
   - Signature
   - Token
@@ -104,11 +105,11 @@ Sample Request
   
   All the above parameters are required. They should passed as JSON in the body of the request.
 
-Sample Response
+**Sample Response**
 
   The response is in JSON an it returns values for ExternalReferencePatientId, ValidationMessages, ValidationStatus and Meta.
   
-  On Success:
+  **On Success:**
   ```
   {
     "ExternalReferencePatientId": "ExternalReferencePatientId",
@@ -118,7 +119,7 @@ Sample Response
   }
   ```
 
-On Failure:
+  **On Failure:**
   
   ```
   {
@@ -130,7 +131,7 @@ On Failure:
     "Meta": null
   }
   ```
-  
+<a href="#top">Click here to Navigate to Top</a>
 <div id="dataCat"></div>  
 ### Application Access – Data Category Request - 45 CFR 170.315(g)(8) 
   
@@ -164,12 +165,12 @@ The API returns patient data on these different categories:
 
 The sample request is shown below: 
 
-Sample Request:
+**Sample Request:**
 
   Method: **POST** 
  URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetV1PatientInfoByExternalPatientId`
 
-Sample Request 
+**Sample Request**
   ```
   Headers:
   {
@@ -191,7 +192,7 @@ Sample Request
   }
   ```
 
-Parameters:
+**Parameters:**
   - DoctorCompanyId
   - Signature
   - Token
@@ -203,7 +204,7 @@ Parameters:
   
   All the above parameters, apart from FromDate and ToDate are required. FromDate and ToDate are optional but you should either have both of them or none of them. The category array should not be empty; it should contain at least one of the categories. 
 
-Sample Response: 
+**Sample Response:**
 
 The response is in JSON and it returns values for PatientCCDSXml, ValidationMessages, ValidationStatus, Meta.
   ```
@@ -216,6 +217,8 @@ The response is in JSON and it returns values for PatientCCDSXml, ValidationMess
   ```
   In order to get patient data for a specific date, fields FromDate and ToDate should be same.
   
+<a href="#top">Click here to Navigate to Top</a>
+
 <div id="allData"> </div>  
 ### Application Access – All Data Request - 45 CFR 170.315(g)(9)
   
@@ -227,7 +230,7 @@ The sample request is shown below:
   Method: POST
  URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetPatientCCDSData`
 
-Sample Response (All Data)
+**Sample Response (All Data)**
 
 Headers:
   ```
@@ -248,7 +251,7 @@ Headers:
   }
   ```
   
-Parameters:
+**Parameters:**
   - DoctorCompanyId
   - Signature
   - Token
@@ -259,7 +262,7 @@ Parameters:
   
     All the above parameters, apart from FromDate and ToDate are required. FromDate and ToDate are optional but you should either have both of them or none of them.
     
-Sample Response
+**Sample Response**
 
 The response is in JSON and it returns values for PatientCCDSXml, ValidationMessages, ValidationStatus, Meta.
   ```
@@ -273,9 +276,11 @@ The response is in JSON and it returns values for PatientCCDSXml, ValidationMess
 The CCDS XML is returned as a value for the key PatientCCDSXml in the JSON response. It can be used by third party clients as per their needs.
 
 In order to get patient data for a specific date, fields FromDate and ToDate should be same.
+
+<a href="#top">Click here to Navigate to Top</a>
+
   
-  
-###Date Criteria filter for g(8), g(9) and VDT
+### Date Criteria filter for g(8), g(9) and VDT
 
 Date is filtered based on the given FromDate and ToDate value and it must follow the following guidelines:
   - “Start Date” should be less than or equal to “To Date”
@@ -293,13 +298,13 @@ The following section contains some scenarios that explain date filtering.
 
 The above table is the master table used for the queries in the scenarios below: 
 
-*Scenario 1:*
+**Scenario 1:**
   - From Date = “01/01/2005”
   - To Date = “12/31/2005”
   
 No records will be listed
 
-*Scenario 2:*
+**Scenario 2:**
   - From Date = “01/01/2005”
   - To Date = “12/31/2006”
   
@@ -307,8 +312,9 @@ No records will be listed
   |  --- | --- | --- | 
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
+  
 
-*Scenario 3:*
+**Scenario 3:**
   - From Date = “01/01/2007”
   - To Date = “12/31/2010”
   
@@ -317,7 +323,8 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
 
-*Scenario 4:*
+
+**Scenario 4:**
   - From Date = “01/01/2007”
   - To Date = “12/31/2011”
   
@@ -330,7 +337,7 @@ No records will be listed
   |Overweight| 12/31/2006 | 6/1/2007 |
 
 
-*Scenario 5:*
+**Scenario 5:**
   - From Date = “01/01/2007”
   - To Date = “12/31/2015”
   
@@ -342,7 +349,8 @@ No records will be listed
   |Fever, unspecified fever cause| 6/22/2015 | |
   |Overweight| 12/31/2006 | 6/1/2007 |
 
-*Scenario 6:*
+
+**Scenario 6:**
   - From Date = “01/01/2008”
   - To Date = “12/31/2011”
   
@@ -352,7 +360,8 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Chronic rejection of renal transplant| 12/31/2011 |  |
 
-*Scenario 7:*
+
+**Scenario 7:**
   - From Date = “01/01/2015”
   - To Date = “12/31/2017”
 
@@ -363,7 +372,8 @@ No records will be listed
   |Chronic rejection of renal transplant| 12/31/2011 |  |
   |Fever, unspecified fever cause| 6/22/2015 | |
 
-*Scenario 8:*
+
+**Scenario 8:**
   - From Date = “12/31/2006”
   - To Date = “12/31/2006”
   
@@ -372,7 +382,8 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
   
-*Scenario 9:*
+  
+**Scenario 9:**
   - From Date = “01/01/2015”
   - To Date = “01/01/2015”
 
@@ -382,7 +393,8 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Chronic rejection of renal transplant| 12/31/2011 |  |
 
-*Scenario 10:*
+
+**Scenario 10:**
   - From Date = “06/01/2007”
   - To Date = “06/01/2007”
 
@@ -391,7 +403,8 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
   |Overweight| 12/31/2006 | 6/1/2007 |
   
-*Scenario 11:*
+  
+**Scenario 11:**
   - From Date = “06/02/2007”
   - To Date = “06/02/2007”
   
@@ -400,5 +413,5 @@ No records will be listed
   |Severe hypothyroidism| 12/31/2006 |  |
 
 
-
+<a href="#top">Click here to Navigate to Top</a>
 ### [Click Here to View RxNTs Privacy Policy](https://www.rxnt.com/privacy-policy/)
