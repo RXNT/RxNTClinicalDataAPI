@@ -1,5 +1,5 @@
 <div id="top"></div>
-## RxNT Clinical Data API Version 1.0
+## RxNT Clinical Data API - Version 1.0
 
 This documentation provides instruction to access RxNT Clinical Data API (RxNT CDAPI). RxNT CDAPI provides access to patients data as part of certification criteria outlined by the Office of the National Coordinator for Health Information Technology (ONC).
 
