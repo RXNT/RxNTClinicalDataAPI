@@ -2,7 +2,7 @@
 
 Thank you for using the RxNT Clinical Data API.
 
-In these API Terms of Use (“Terms”) “RxNT” refers to Networking Technology, Inc. the API software vendor, and "this site" refers to "RxNT.com", “HCO” refers to the Health Care Organization that has implemented the RxNT API software.  These Terms govern your access to and use of the RxNT API.  By accessing or using the RxNT API, the App Developer (“You”), agree to be bound by these Terms.
+In these API Terms of Use (“Terms”) “RxNT” refers to Networking Technology, Inc. the API software vendor, "this site" refers to "RxNT.com", “HCO” refers to the Health Care Organization that has implemented the RxNT API software.  These Terms govern your access to and use of the RxNT API.  By accessing or using the RxNT API, the App Developer (“You”), agree to be bound by these Terms.
 
 1. **OFFICE OF THE NATIONAL COORDINATOR FOR HEALTH INFORMATION TECHNOLOGY (“ONC”)**
 
