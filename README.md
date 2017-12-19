@@ -1,7 +1,7 @@
 <div id="top"></div>
 ## RxNT Clinical Data API - Version 1.0
 
-This documentation provides instruction to access RxNT Clinical Data API (RxNT CDAPI). RxNT CDAPI provides access to patients data as part of certification criteria outlined by the Office of the National Coordinator for Health Information Technology (ONC).
+This documentation provides instructions to access RxNT Clinical Data API (RxNT CDAPI). RxNT CDAPI provides access to patients data as part of certification criteria outlined by the Office of the National Coordinator for Health Information Technology (ONC).
 
 This document should be used by third parties as a reference to access patient clinical data. This document serves to fulfill the following criterion outlined by ONC.
 - <a href="#patSel">Application Access – Patient Selection - 45 CFR 170.315(g)(7)</a>
@@ -13,9 +13,9 @@ This document should be used by third parties as a reference to access patient c
 
 In complaince to 45 CFR 170.315(g)(7), RxNT CDAPI provides an API that receives a request from another software component/service with identifying information about a patient and returns a unique token specific to that patient.
 
-  In order to access patient information, any third party application/ patient representative should first be registered to RxNT. For registration, clients need to contact RxNT at **support@rxnt.com** with their information. Upon verification, RxNT will provide appropriate login information to the external clients and this API authenticates third party clients.
+  In order to access patient information, any third party application/ patient representative should first be registered to RxNT. For registration, clients need to contact RxNT at **support@rxnt.com** with their information. Upon verification, RxNT will provide appropriate login information to the external clients and this API authenticates those third party clients.
 
-  RxNT performs check to ensure that the third party has the correct login credentials and access to the patient information. If the third party is authorized to access patient data, RxNT authenticates the third party and returns a limited time token which should be used for subsequent API calls.
+  RxNT performs checks to ensure that the third party has the correct login credentials and access to the patient information. If the third party is authorized to access patient data, RxNT authenticates the third party and returns a limited time token which should be used for subsequent API calls.
   
 <div id="request"> </div>
 
