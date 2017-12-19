@@ -412,4 +412,4 @@ No records will be listed
 
 <br>
 <a href="#top">Click here to Navigate to Top</a>
-### [Click Here to View RxNTs Privacy Policy](https://www.rxnt.com/privacy-policy/)
+### [Click Here to View RxNTs Terms and Conditions](https://rxnt.github.io/RxNTClinicalDataAPI/terms)
