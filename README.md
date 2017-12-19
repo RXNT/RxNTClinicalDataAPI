@@ -31,7 +31,7 @@ The request body should contain the following login information provided to them
 **Sample Request:**
 
   Method: **POST**              
-  URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/authentication/AuthenticateUser`
+  URL:`https://www.devqa.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/authentication/AuthenticateUser`
   
   ```
   Headers: 
@@ -226,7 +226,7 @@ The response is in JSON and it returns values for PatientCCDSXml, ValidationMess
 The sample request is shown below:
 
   Method: POST
- URL:`https://www.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetPatientCCDSData`
+ URL:`https://www.devqa.rxnt.com/MasterIndexExternalAPIServices/masterindexexternalapi/v1/patientdashboard/patientccd/GetPatientCCDSData`
 
 **Sample Request (All Data)**
 
